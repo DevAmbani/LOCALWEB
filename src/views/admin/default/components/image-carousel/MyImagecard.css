@@ -1,0 +1,51 @@
+.myimgcard {
+    background-color: white;
+    border: 2px solid #3965FF;
+    margin: 0.75rem;
+    min-width: 180px;
+    max-width: 150px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.myimgcard-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.insideimgcard {
+    padding: 10px;
+    background-color:blue;
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.myimgcard h1, .myimgcard h5 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.myimgcard h1 {
+    font-size: large;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.insideimgcard h5 {
+    font-size: medium;
+}

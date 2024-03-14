@@ -1,0 +1,138 @@
+[
+  {
+    "bookingId": "1",
+    "bookingName": "John Doe",
+    "bookingTimeSlot": "10:00 AM - 11:00 AM",
+    "showedUp": true,
+    "date": "2024-03-15",
+    "day": "Wednesday"
+  },
+  {
+    "bookingId": "2",
+    "bookingName": "Alice Smith",
+    "bookingTimeSlot": "9:00 AM - 10:00 AM",
+    "showedUp": false,
+    "date": "2024-03-15",
+    "day": "Wednesday"
+  },
+  {
+    "bookingId": "3",
+    "bookingName": "Bob Johnson",
+    "bookingTimeSlot": "01:00 PM - 02:00 PM",
+    "showedUp": true,
+    "date": "2024-03-15",
+    "day": "Wednesday"
+  },
+  {
+    "bookingId": "4",
+    "bookingName": "Emma Davis",
+    "bookingTimeSlot": "9:00 AM - 10:00 AM",
+    "showedUp": false,
+    "date": "2024-03-15",
+    "day": "Wednesday"
+  },
+  {
+    "bookingId": "5",
+    "bookingName": "Michael Wilson",
+    "bookingTimeSlot": "10:00 AM - 11:00 AM",
+    "showedUp": true,
+    "date": "2024-03-16",
+    "day": "Thursday"
+  },
+  {
+    "bookingId": "6",
+    "bookingName": "Sarah Brown",
+    "bookingTimeSlot": "9:00 AM - 10:00 AM",
+    "showedUp": false,
+    "date": "2024-03-16",
+    "day": "Thursday"
+  },
+  {
+    "bookingId": "7",
+    "bookingName": "Olivia Taylor",
+    "bookingTimeSlot": "9:00 AM - 10:00 AM",
+    "showedUp": false,
+    "date": "2024-03-16",
+    "day": "Thursday"
+  },
+  {
+    "bookingId": "8",
+    "bookingName": "James Lee",
+    "bookingTimeSlot": "10:00 AM - 11:00 AM",
+    "showedUp": true,
+    "date": "2024-03-17",
+    "day": "Friday"
+  },
+  {
+    "bookingId": "9",
+    "bookingName": "Ava Martinez",
+    "bookingTimeSlot": "9:00 AM - 10:00 AM",
+    "showedUp": false,
+    "date": "2024-03-17",
+    "day": "Friday"
+  },
+  {
+    "bookingId": "10",
+    "bookingName": "Noah Hernandez",
+    "bookingTimeSlot": "10:00 AM - 11:00 AM",
+    "showedUp": true,
+    "date": "2024-03-18",
+    "day": "Saturday"
+  },
+  {
+    "bookingId": "11",
+    "bookingName": "Liam Gonzales",
+    "bookingTimeSlot": "10:00 AM - 11:00 AM",
+    "showedUp": true,
+    "date": "2024-03-18",
+    "day": "Saturday"
+  },
+  {
+    "bookingId": "12",
+    "bookingName": "Mia Perez",
+    "bookingTimeSlot": "9:00 AM - 10:00 AM",
+    "showedUp": false,
+    "date": "2024-03-18",
+    "day": "Saturday"
+  },
+  {
+    "bookingId": "13",
+    "bookingName": "Ethan King",
+    "bookingTimeSlot": "10:00 AM - 11:00 AM",
+    "showedUp": true,
+    "date": "2024-03-19",
+    "day": "Sunday"
+  },
+  {
+    "bookingId": "14",
+    "bookingName": "William Baker",
+    "bookingTimeSlot": "10:00 AM - 11:00 AM",
+    "showedUp": true,
+    "date": "2024-03-20",
+    "day": "Monday"
+  },
+  {
+    "bookingId": "15",
+    "bookingName": "Emily Gray",
+    "bookingTimeSlot": "9:00 AM - 10:00 AM",
+    "showedUp": false,
+    "date": "2024-03-20",
+    "day": "Monday"
+  },
+  {
+    "bookingId": "16",
+    "bookingName": "Benjamin Cox",
+    "bookingTimeSlot": "10:00 AM - 11:00 AM",
+    "showedUp": true,
+    "date": "2024-03-21",
+    "day": "Tuesday"
+  },
+  {
+    "bookingId": "17",
+    "bookingName": "John Doe",
+    "bookingTimeSlot": "10:00 AM - 11:00 AM",
+    "showedUp": false,
+    "date": "2024-03-21",
+    "day": "Tuesday"
+  }
+]

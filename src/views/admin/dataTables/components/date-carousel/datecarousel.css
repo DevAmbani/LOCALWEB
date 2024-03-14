@@ -1,0 +1,54 @@
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 26px;
+}
+
+.product-container {
+    padding: 0 10px;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+    /* Ensure the container is positioned relatively */
+}
+
+.pre-btn,
+.next-btn {
+    border: none;
+    width: 60px;
+    height: 80%;
+    position: absolute;
+    top: 70%;
+    /* Adjust top position */
+    transform: translateY(-50%);
+    /* Center vertically */
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    /* Ensure buttons are above the carousel */
+}
+
+.next-btn {
+    right: 0;
+}
+
+.next-btn p,
+.pre-btn p {
+    font-size: 50px;
+    background-color: rgba(255, 255, 255, 0.436);
+    box-shadow: 0px 0px 10px 1px black;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    width: 50px;
+    cursor: pointer;
+}
+
+.table-wrapper {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
