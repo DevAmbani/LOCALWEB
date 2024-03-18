@@ -1,7 +1,8 @@
 import React from "react";
 
 import { Icon } from "@chakra-ui/react";
-import { CalendarIcon, TimeIcon } from '@chakra-ui/icons';
+import { CalendarIcon, TimeIcon, TriangleUpIcon } from '@chakra-ui/icons';
+
 import {
   MdBarChart,
   MdPerson,
@@ -26,6 +27,14 @@ const routes = [
     component: MainDashboard,
   },
   {
+    name: "Manage Events",
+    layout: "/admin",
+    path: "/manageEvents",
+    icon: <Icon as={TriangleUpIcon} width='20px' height='20px' color='inherit' />,
+    component: NFTMarketplace,
+    secondary: true,
+  },
+  {
     name: "Current Bookings",
     layout: "/admin",
     icon: <Icon as={CalendarIcon} width='20px' height='20px' color='inherit' />,
@@ -39,12 +48,20 @@ const routes = [
     icon: <Icon as={MdPerson} width='20px' height='20px' color='inherit' />,
     component: Profile,
   },
+  
   {
     name: "Sign In",
     layout: "/auth",
     path: "/sign-in",
     icon: <Icon as={MdLock} width='20px' height='20px' color='inherit' />,
     component: SignInCentered,
+  },
+  {
+    name: "Account",
+    layout: "/admin",
+    path: "/rtl-default",
+    icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
+    component: RTL,
   },
 ];
 
