@@ -9,6 +9,8 @@ import eateries2 from "./images/eateries2.png";
 import salon2 from "./images/salon2.png";
 import cinema2 from "./images/cinema2.png";
 import back from "./images/bg.png";
+import { useHistory } from 'react-router-dom';
+
 
 const theme = createTheme({
     breakpoints: {
@@ -37,7 +39,10 @@ function Category() {
             : {};
     };
 
+    const history = useHistory();
+    
     const handleContinue = () => {
+       
         if (!selectedCard) {
             Swal.fire({
                 icon: 'warning',
@@ -45,7 +50,7 @@ function Category() {
             });
         } else {
             // Navigate to the eventsCount page
-            window.location.href = '/eventsCount';
+            history.push('/eventsCount');
         }
     };
 
@@ -60,7 +65,7 @@ function Category() {
 
                             <Grid item xs={10} sm={9} md={4} >
                                 <Card className="card" onMouseEnter={() => setIsEventsHovered(true)} onMouseLeave={() => setIsEventsHovered(false)}  onClick={()=>handleCardClick("events")} 
-                                  style={{ maxWidth: '85%', maxHeight: '100%',  ...getCardBorderStyle("events") ,borderRadius: '0px', boxShadow: '0 4px 8px rgba(50, 50, 50, 0.5)', background: '#E9E3FF', transform: isEventsHovered ? 'scale(1.1)' : 'scale(1)' , transition: 'transform 0.5s ease', cursor: 'pointer' }}>
+                                  style={{ maxWidth: '85%', maxHeight: '100%',  ...getCardBorderStyle("events") ,borderRadius: '0px', boxShadow: '0 4px 8px rgba(50, 50, 50, 0.5)', background: '#E9E3FF', transform: isEventsHovered ? 'scale(1.05)' : 'scale(1)' , transition: 'transform 0.5s ease', cursor: 'pointer' }}>
                                     <CardContent style={{ padding: '0px', position: 'relative' }}>
                                         <img src={cinema2} style={{ width: '100%', height: '105%', clipPath: 'polygon(15% 0, 100% 0, 100% 85%, 0 100%, 0 0)' }} />
                                         <Typography className="text1">Standups, Movies, Acts, Dramas, Sports</Typography>
@@ -80,7 +85,7 @@ function Category() {
 
                             <Grid item xs={10} sm={9} md={4} >
                                 <Card className="card" onMouseEnter={() => setIsActivitiesHovered(true)} onMouseLeave={() => setIsActivitiesHovered(false)} onClick={() =>handleCardClick("activities")} 
-                               style={{ marginTop:'2%' , maxWidth: '85%', maxHeight: '100%',  ...getCardBorderStyle("activities") , borderRadius: '0px',  boxShadow: '0 4px 8px rgba(50, 50, 50, 0.5)', background:'#E9E3FF', transform: isActivitiesHovered ? 'scale(1.1)' : 'scale(1)', transition: 'transform 0.5s ease', cursor: 'pointer' }}>
+                               style={{ marginTop:'2%' , maxWidth: '85%', maxHeight: '100%',  ...getCardBorderStyle("activities") , borderRadius: '0px',  boxShadow: '0 4px 8px rgba(50, 50, 50, 0.5)', background:'#E9E3FF', transform: isActivitiesHovered ? 'scale(1.05)' : 'scale(1)', transition: 'transform 0.5s ease', cursor: 'pointer' }}>
                                     <CardContent style={{ padding: '0%', position: 'relative' }}>
                                         <img src={salon2} style={{ width: '100%', height: '105%', clipPath: 'polygon(15% 0, 100% 0, 100% 85%, 0 100%, 0 0)' }} />
                                         <Typography className="text1">Barber, Nails, Salons, Spa, Massages</Typography>

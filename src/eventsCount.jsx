@@ -9,6 +9,7 @@ import blue1 from "./images/blue1.png";
 import blue2 from "./images/blue2.png";
 import blue3 from "./images/blue3.png";
 import blue4 from "./images/blue4.png";
+import { useHistory } from 'react-router-dom';
 
 
 const theme = createTheme({
@@ -55,6 +56,8 @@ function EventsCount() {
             : {};
     };
 
+    const history = useHistory();
+
     const handleContinue = () => {
         if (!selectedCard1 || !selectedCard2) {
             Swal.fire({
@@ -63,7 +66,7 @@ function EventsCount() {
             });
         } else {
             // Navigate to the eventsForm page
-            window.location.href = '/eventsForm';
+             history.push('/eventsForm');
         }
     };
 

@@ -11,23 +11,28 @@ import { ThemeEditorProvider } from '@hypertheme-editor/chakra-ui';
 import Category from './category';
 import EventsCount from './eventsCount';
 import EventsForm from './eventsForm';
+import { ThemeProvider } from '@emotion/react';
+import colorfontTheme from './colorfontTheme';
 
 ReactDOM.render(
+    
     <ChakraProvider theme={theme}>
+        
         <React.StrictMode>
-            <ThemeEditorProvider>
+            
                 <HashRouter>
                     <Switch>
                         <Route path="/auth" component={AuthLayout} />
                         <Route path="/admin" component={AdminLayout} />
                         <Route path="/rtl" component={RtlLayout} />
-                        <Route path="/eventsForm" component={EventsForm} />
-                        <Route path="/eventsCount" component={EventsCount} />
-                        <Route path="/" component={Category} />
+                        <ThemeProvider theme={colorfontTheme}> <Route path="/eventsForm" component={EventsForm} /></ThemeProvider>
+                        <ThemeProvider theme={colorfontTheme}><Route path="/eventsCount" component={EventsCount} /></ThemeProvider>
+                        <ThemeProvider theme={colorfontTheme}><Route path="/" component={Category} /></ThemeProvider>
                     </Switch>
                 </HashRouter>
-            </ThemeEditorProvider>
+            
         </React.StrictMode>
+
     </ChakraProvider>,
     document.getElementById('root')
 );

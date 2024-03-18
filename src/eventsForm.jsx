@@ -93,33 +93,33 @@ function EventsForm() {
 
   
  
-  const handleChange = async (event) => {
-    const userInput = event.target.value;
-    setInputValue(userInput);
+  // const handleChange = async (event) => {
+  //   const userInput = event.target.value;
+  //   setInputValue(userInput);
   
-    try {
-      const response = await axios.get('https://chrislim2888-ip-address-geolocation.p.rapidapi.com/', {
-        params: {
-          key: '<REQUIRED>',
-          ip: userInput,
-          format: 'json',
-        },
-        headers: {
-          'X-RapidAPI-Key': '2b7f7115f8mshb57e9048252d59ap1197f8jsnff702884dc6f',
-          'X-RapidAPI-Host': 'chrislim2888-ip-address-geolocation.p.rapidapi.com',
-        },
-      });
+  //   try {
+  //     const response = await axios.get('https://chrislim2888-ip-address-geolocation.p.rapidapi.com/', {
+  //       params: {
+  //         key: '<REQUIRED>',
+  //         ip: userInput,
+  //         format: 'json',
+  //       },
+  //       headers: {
+  //         'X-RapidAPI-Key': '2b7f7115f8mshb57e9048252d59ap1197f8jsnff702884dc6f',
+  //         'X-RapidAPI-Host': 'chrislim2888-ip-address-geolocation.p.rapidapi.com',
+  //       },
+  //     });
   
-      if (response.status === 200) {
-        setLocations(response.data.results || []); // Assuming data.results contains locations
-        setError(null);
-      } else {
-        setError('Failed to fetch locations');
-      }
-    } catch (error) {
-      setError('Error fetching locations: ' + error.message);
-    }
-  };
+  //     if (response.status === 200) {
+  //       setLocations(response.data.results || []); // Assuming data.results contains locations
+  //       setError(null);
+  //     } else {
+  //       setError('Failed to fetch locations');
+  //     }
+  //   } catch (error) {
+  //     setError('Error fetching locations: ' + error.message);
+  //   }
+  // };
   
 
   return (
@@ -226,12 +226,13 @@ function EventsForm() {
                 variant="filled" 
                 style={{marginTop:'15px',marginBottom:'40px', width:'70%'}}
                 value={inputValue}
-                onChange={handleChange} />
-                 <div style={{ display: 'flex', flexDirection: 'column' }}>
+                // onChange={handleChange} 
+                />
+                 {/* <div style={{ display: 'flex', flexDirection: 'column' }}>
                   {locations.map((location, index) => (
                   <Typography key={index}>{location}</Typography>
                   ))}
-                  </div>
+                  </div> */}
 
                 <div style={{display:'flex'}}>
                 <img src={pricetag} style={{width:'40px', marginRight:'10px', marginBottom:'5px'}}/>
@@ -295,7 +296,7 @@ function EventsForm() {
                   <Typography className="formSubHeadings" style={{marginTop:'6px'}}>(Max 25) Help people see what they can expect from this event</Typography>
               
                 <div>
-                  <Link to={"/manageEvents"}><Button variant="contained" className="buttonText2" color="brand500" style={{marginTop:'80px' , width:'80%',height:'42px',justifyContent:'center'}}>Publish Now</Button></Link>
+                  <Link to={"/admin"}><Button variant="contained" className="buttonText2" color="brand500" style={{marginTop:'80px' , width:'80%',height:'42px',justifyContent:'center'}}>Publish Now</Button></Link>
                 </div>
                 <div>
                   <Button variant="contained" className="buttonText2" color="brand500" style={{marginTop:'30px', width:'80%',height:'42px'}}>Save Draft</Button>
