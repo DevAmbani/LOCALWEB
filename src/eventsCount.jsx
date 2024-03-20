@@ -9,8 +9,7 @@ import blue1 from "./images/blue1.png";
 import blue2 from "./images/blue2.png";
 import blue3 from "./images/blue3.png";
 import blue4 from "./images/blue4.png";
-import { useHistory } from 'react-router-dom';
-
+import { Redirect } from "react-router-dom"; 
 
 const theme = createTheme({
     breakpoints: {
@@ -35,6 +34,7 @@ function EventsCount() {
     const [isButtonHovered, setIsButtonHovered] = useState(false);
     const [selectedCard1, setSelectedCard1] = useState(null);
     const [selectedCard2, setSelectedCard2] = useState(null);
+    const [redirectToEventsForm, setRedirectToEventsForm] = useState(false);
 
     const handleCardClick1 = (cardName) => {
         setSelectedCard1(cardName === selectedCard1 ? null : cardName);
@@ -56,8 +56,6 @@ function EventsCount() {
             : {};
     };
 
-    const history = useHistory();
-
     const handleContinue = () => {
         if (!selectedCard1 || !selectedCard2) {
             Swal.fire({
@@ -65,10 +63,14 @@ function EventsCount() {
                 text: 'Please select an option for both questions.',
             });
         } else {
-            // Navigate to the eventsForm page
-             history.push('/eventsForm');
+            setRedirectToEventsForm(true);
         }
     };
+
+    if (redirectToEventsForm) {
+        return <Redirect to="/eventsForm" />;
+    }
+
 
     return (
         <div>

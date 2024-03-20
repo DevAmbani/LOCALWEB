@@ -126,7 +126,7 @@ import {
               }}
               mt='25px' mb='10px'>
                 <Icon as={MdDelete} onClick={() =>  handleDeleteUpCards(id)} style={{ width: '30px', position: 'absolute', left: 0, marginLeft: '15px', cursor: 'pointer', color: 'secondaryGray.500', h: '20px', w: '20px' }} />
-                <Link to="/eventsCount" >
+                <Link to="/eventsCount">
                 <Icon as={MdEdit}  style={{ width: '30px', position: 'absolute', right: 0, marginRight: '15px', cursor: 'pointer', color: 'secondaryGray.500', h: '20px', w: '20px' }} />
                 </Link>
             </Flex>

@@ -17,22 +17,25 @@ import colorfontTheme from './colorfontTheme';
 ReactDOM.render(
     
     <ChakraProvider theme={theme}>
-        
+       
         <React.StrictMode>
-            
-                <HashRouter>
+        <ThemeEditorProvider>
+        <HashRouter> 
                     <Switch>
                         <Route path="/auth" component={AuthLayout} />
                         <Route path="/admin" component={AdminLayout} />
                         <Route path="/rtl" component={RtlLayout} />
+                        <Redirect to="/" />
+                    </Switch>
                         <ThemeProvider theme={colorfontTheme}> <Route path="/eventsForm" component={EventsForm} /></ThemeProvider>
                         <ThemeProvider theme={colorfontTheme}><Route path="/eventsCount" component={EventsCount} /></ThemeProvider>
                         <ThemeProvider theme={colorfontTheme}><Route path="/" component={Category} /></ThemeProvider>
-                    </Switch>
-                </HashRouter>
-            
+                        
+        </HashRouter>
+        </ThemeEditorProvider>
         </React.StrictMode>
-
+       
     </ChakraProvider>,
+    
     document.getElementById('root')
 );

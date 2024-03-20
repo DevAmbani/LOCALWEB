@@ -14,6 +14,7 @@ import descrp from "./images/notes.png";
 import pricetag from "./images/pricetag.png";
 import location from "./images/location.png";
 import axios from 'axios';
+import { Redirect } from "react-router-dom"; 
 
 function EventsForm() {
   const [isButtonHovered, setIsButtonHovered] = useState(false);

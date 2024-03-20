@@ -9,8 +9,7 @@ import eateries2 from "./images/eateries2.png";
 import salon2 from "./images/salon2.png";
 import cinema2 from "./images/cinema2.png";
 import back from "./images/bg.png";
-import { useHistory } from 'react-router-dom';
-
+import { Redirect } from "react-router-dom"; 
 
 const theme = createTheme({
     breakpoints: {
@@ -28,6 +27,7 @@ function Category() {
     const [isActivitiesHovered, setIsActivitiesHovered] = useState(false);
     const [isButtonHovered, setIsButtonHovered] = useState(false);
     const [selectedCard, setSelectedCard] = useState(null);
+    const [redirectToEventsCount, setRedirectToEventsCount] = useState(false);
 
     const handleCardClick = (cardName) => {
         setSelectedCard(cardName === selectedCard ? null : cardName);
@@ -39,7 +39,7 @@ function Category() {
             : {};
     };
 
-    const history = useHistory();
+  
     
     const handleContinue = () => {
        
@@ -49,10 +49,14 @@ function Category() {
                 text: 'Please select an option.',
             });
         } else {
-            // Navigate to the eventsCount page
-            history.push('/eventsCount');
+            setRedirectToEventsCount(true);
         }
     };
+
+    if (redirectToEventsCount) {
+        return <Redirect to="/eventsCount" />;
+    }
+
 
     return (
         <div>
