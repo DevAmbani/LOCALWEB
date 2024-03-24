@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'assets/css/App.css';
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import AuthLayout from 'layouts/auth';
 import AdminLayout from 'layouts/admin';
 import RtlLayout from 'layouts/rtl';
@@ -11,31 +11,30 @@ import { ThemeEditorProvider } from '@hypertheme-editor/chakra-ui';
 import Category from './category';
 import EventsCount from './eventsCount';
 import EventsForm from './eventsForm';
+import SignIn from './views/auth/signIn'; // Adjust the import path as needed
 import { ThemeProvider } from '@emotion/react';
 import colorfontTheme from './colorfontTheme';
 
 ReactDOM.render(
-    
     <ChakraProvider theme={theme}>
-       
         <React.StrictMode>
-        <ThemeEditorProvider>
-        <HashRouter> 
+            <ThemeEditorProvider>
+                <Router>
                     <Switch>
-                        <Route path="/auth" component={AuthLayout} />
                         <Route path="/admin" component={AdminLayout} />
                         <Route path="/rtl" component={RtlLayout} />
+                        </Switch>
+                        <ThemeProvider theme={colorfontTheme}>
+                            <Route path="/category" component={Category} />
+                            <Route path="/eventsForm" component={EventsForm} />
+                            <Route path="/eventsCount" component={EventsCount} />
+                        </ThemeProvider>
+                        <Route path="/" exact component={SignIn} />
                         <Redirect to="/" />
-                    </Switch>
-                        <ThemeProvider theme={colorfontTheme}> <Route path="/eventsForm" component={EventsForm} /></ThemeProvider>
-                        <ThemeProvider theme={colorfontTheme}><Route path="/eventsCount" component={EventsCount} /></ThemeProvider>
-                        <ThemeProvider theme={colorfontTheme}><Route path="/" component={Category} /></ThemeProvider>
-                        
-        </HashRouter>
-        </ThemeEditorProvider>
+                   
+                </Router>
+            </ThemeEditorProvider>
         </React.StrictMode>
-       
     </ChakraProvider>,
-    
     document.getElementById('root')
 );

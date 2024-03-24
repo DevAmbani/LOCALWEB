@@ -35,7 +35,13 @@ code {
   font-size: 300% !important;
   margin-top: 0% !important;
   /* margin-left: 16% !important; */
-  color: #11047A;
+  /* color: #11047A; */
+}
+
+.CountText{
+  font-family: 'Poppins', sans-serif !important; 
+  font-size: 270% !important;
+  margin-top: 0% !important;
 }
 
 .text1{
@@ -43,7 +49,7 @@ code {
   font-size: 170% !important;
   margin-left: 15% !important;
   margin-right: 10% !important;
-  color: #11047A;
+  /* color: #11047A; */
 }
 
 

@@ -42,6 +42,7 @@ import {
 // Custom components
 import { HSeparator } from "components/separator/Separator";
 import DefaultAuth from "layouts/auth/Default";
+import { Link } from "react-router-dom";
 // Assets
 import illustration from "assets/img/auth/auth.png";
 import { FcGoogle } from "react-icons/fc";
@@ -201,6 +202,7 @@ function SignIn() {
                 </Text>
               </NavLink>
             </Flex>
+            <Link to={"/category"}>
             <Button
               fontSize='sm'
               variant='brand'
@@ -210,6 +212,7 @@ function SignIn() {
               mb='24px'>
               Sign In
             </Button>
+            </Link>
           </FormControl>
           <Flex
             flexDirection='column'
